@@ -1,5 +1,3 @@
-import buildControls from "../BuildControls";
-
 import React from 'react';
 
 import classes from './BuildControl.module.css';
