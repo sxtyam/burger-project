@@ -9,7 +9,9 @@ const withErrorHandler = (WrappedComponent, axios) => {
             error: null
         }
 
-        componentDidMount () {
+        // Max said we can use constructor here, but not working properly on showing req error!
+        UNSAFE_componentWillMount (props) {
+            // super(props);
             axios.interceptors.request.use(req => {
                 this.setState({error: null});
                 return req;
